@@ -1,12 +1,16 @@
-import React from "react"
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import LoginPage from './pages/LoginPage';
 
-function App() {
-  
+
+const App = () => {
   return (
-    <>
-      <h1 className="text-3xl font-bold text-center">Hello, Tailwind CSS!</h1>
-    </>
-  )
-}
+    <Router>
+      <Routes>
+        <Route path="/login" element={<LoginPage />} />
+      </Routes>
+    </Router>
+  );
+};
 
-export default App
+export default App;
